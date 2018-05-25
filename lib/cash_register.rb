@@ -5,9 +5,6 @@ attr_accessor :total, :discount
     @discount = d
  end
 
- def discount(d)
-   @discount = d
- end
 def add_item
 end
 def apply_discount
