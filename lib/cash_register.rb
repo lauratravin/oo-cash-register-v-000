@@ -4,7 +4,5 @@ attr_accessor :total, :discount
     @total= 0
     @discount =
  end
- def discount
-    @discount = 20
- end
+
 end
