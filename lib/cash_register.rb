@@ -9,10 +9,12 @@ attr_accessor :total, :discount
 
 def add_item(prod, price, q=1)
   @product = prod
-  @allpro << prod
+
   @quantities = q
   @total += price *  q
-
+   for i in 1..q do
+     @allpro << prod
+   end
 end
 def apply_discount
   if self.discount != nil
