@@ -13,7 +13,7 @@ def add_item(prod, price,q=1)
 end
 def apply_discount
     self.total = self.total*( 1- self.discount/100.to_f)
-     return "After the discount, the total comes to $#{@total.to_i}."
+     return "After the discount, the total comes to $#{self.total.to_i}."
 end
 
 def void_last_transaction
