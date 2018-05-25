@@ -12,8 +12,8 @@ def add_item(prod, price,q=1)
 
 end
 def apply_discount
-    self.total = self.total*( 1- b/100.to_f)
-  
+    self.total = self.total*( 1- self.discount/100.to_f)
+
 end
 
 def void_last_transaction
