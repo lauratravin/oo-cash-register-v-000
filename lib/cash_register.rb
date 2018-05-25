@@ -12,8 +12,11 @@ def add_item(prod, price,q=1)
 
 end
 def apply_discount
+  if self.discount != nil
     self.total = self.total*( 1- self.discount/100.to_f)
      return "After the discount, the total comes to $#{self.total.to_i}."
+  else
+    return "There is no discount to apply."   
 end
 
 def void_last_transaction
