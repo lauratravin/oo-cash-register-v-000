@@ -1,12 +1,14 @@
 class CashRegister
+  @@allpro = []
 attr_accessor :total, :discount
  def initialize(d=nil)
     @total = 0
     @discount = d
  end
 
-def add_item(prod, price,q=1)
+def add_item(prod, price, q=1)
   @product = prod
+  @@allpro << prod
   @quantities = q
   @total += price *  q
 
@@ -18,6 +20,9 @@ def apply_discount
   else
     return "There is no discount to apply."
   end     
+end
+def items
+    @@allpro
 end
 
 def void_last_transaction
