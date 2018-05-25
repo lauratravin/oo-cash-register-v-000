@@ -32,10 +32,11 @@ def apply_discount
   end
 end
 def items
-      @total -=  @@pricelist[@allpro[@allpro.length -1]]
+      @total 
 end
 
 def void_last_transaction
+  @total -=  @@pricelist[@allpro[@allpro.length -1]]
 end
 
 end
