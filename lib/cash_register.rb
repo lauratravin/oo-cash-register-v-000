@@ -5,6 +5,6 @@ attr_accessor :total
     discount
  end
  def discount
-    disc = 20
+    @disc = 20
  end
 end
