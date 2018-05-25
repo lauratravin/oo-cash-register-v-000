@@ -36,7 +36,8 @@ def items
 end
 
 def void_last_transaction
-    @total -=  @@pricelist[@allpro[@allpro.length -1]]
+     n = @allpro.length
+    @total = @total -  @@pricelist[@allpro[n-1]]
 end
 
 end
