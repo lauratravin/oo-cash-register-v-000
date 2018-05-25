@@ -5,7 +5,7 @@ attr_accessor :total, :discount
     @discount = d
  end
 
-def add_item(prod, price)
+def add_item(prod, price,quantity=nil)
   @product = prod
   @total += price
 
