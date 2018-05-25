@@ -1,5 +1,5 @@
 class CashRegister
-
+  @@pricelist= {}
 attr_accessor :total, :discount
  def initialize(d=nil)
     @total = 0
@@ -15,6 +15,13 @@ def add_item(prod, price, q=1)
    for i in 1..q do
      @allpro << prod
    end
+
+   if @@pricelist == {}
+     @@pricelist = { prod => price }
+   else
+     @@pricelist[prod] = price
+   end
+
 end
 def apply_discount
   if self.discount != nil
@@ -25,7 +32,7 @@ def apply_discount
   end
 end
 def items
-    @allpro
+      @total -=  @@pricelist[@allpro[@allpro.length -1]]
 end
 
 def void_last_transaction
